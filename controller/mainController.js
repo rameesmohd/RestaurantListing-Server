@@ -65,7 +65,6 @@ const updateData = async (req, res) => {
     try {
         const obj = req.body;
         let imageURL;
-        
         if(req.files.image){
             const image = req.files.image[0];
             if (image) {
@@ -96,8 +95,7 @@ const updateData = async (req, res) => {
         console.log(error);
         return res.status(500).json({ message: 'Internal Server Error', error: error });
     }
-};
-
+}
 
 const deleteData=async(req,res)=>{
     try {
