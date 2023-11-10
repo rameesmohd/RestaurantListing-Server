@@ -9,9 +9,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 
-console.log('conn');
 app.use('/',mainRoute)
-
 
 app.listen(process.env.PORT, () => {
   console.log(`app listening at http://localhost:${process.env.PORT}`)
